@@ -1,0 +1,24 @@
+{
+  "name": "hub_de_leitura-teste_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lipee05/Hub_de_Leitura-Teste_UI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lipee05/Hub_de_Leitura-Teste_UI/issues"
+  },
+  "homepage": "https://github.com/lipee05/Hub_de_Leitura-Teste_UI#readme",
+  "dependencies": {
+    "cypress": "^15.10.0"
+  }
+}
