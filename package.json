@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/lipee05/Hub_de_Leitura-Teste_UI#readme",
   "dependencies": {
+    "@faker-js/faker": "^10.3.0",
     "cypress": "^15.10.0"
   }
 }
