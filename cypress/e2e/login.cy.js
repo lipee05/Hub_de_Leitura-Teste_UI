@@ -25,7 +25,7 @@ describe('Funcionalidade: Login', () => {
         cy.url().should('include', 'dashboard.html')
     });
 
-    it.only('Deve fazer login usando Custom Commands', () => {
+    it('Deve fazer login usando Custom Commands', () => {
         cy.login(user.email, user.senha)
     });
 });
