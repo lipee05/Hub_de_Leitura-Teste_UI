@@ -24,8 +24,8 @@ describe('Funcionalidade: Login', () => {
         cy.login('admin@biblioteca.com', 'admin123')
         cy.url().should('include', 'dashboard.html')
     });
-
-    it('Deve fazer login usando Custom Commands', () => {
+    
+it('Deve fazer login usando Custom Commands', () => {
         cy.login(user.email, user.senha)
     });
 });
