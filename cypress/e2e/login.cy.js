@@ -1,4 +1,5 @@
 /// <reference types="cypress"/>
+import user from "../fixtures/usuario.json"
 
 describe('Funcionalidade: Login', () => {
 
@@ -6,7 +7,7 @@ describe('Funcionalidade: Login', () => {
         cy.visit('login.html')
     });
 
-    it('deve fazer login com seucesso', () => {
+    it('deve fazer login com sucesso', () => {
         cy.get('#email').type('usuario@teste.com')
         cy.get('#password').type('user123')
         cy.get('#login-btn').click()
@@ -19,27 +20,12 @@ describe('Funcionalidade: Login', () => {
         cy.url().should('include', 'dashboard.html')
     });
 
-    it.only('Fazer login como ADM', () => {
+    it('Fazer login como ADM', () => {
         cy.login('admin@biblioteca.com', 'admin123')
         cy.url().should('include', 'dashboard.html')
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    it.only('Deve fazer login usando Custom Commands', () => {
+        cy.login(user.email, user.senha)
+    });
 });
