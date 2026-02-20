@@ -6,7 +6,7 @@ describe('Funcionalidade: Login', () => {
         cy.visit('login.html')
     });
 
-    it('deve fazer login com seucesso', () => {
+    it('deve fazer login com sucesso', () => {
         cy.get('#email').type('usuario@teste.com')
         cy.get('#password').type('user123')
         cy.get('#login-btn').click()
