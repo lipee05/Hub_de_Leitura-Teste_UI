@@ -11,10 +11,25 @@ describe('Funcionalidade: Busca no catalogo', () => {
         cy.get('#search-input').type('1984')
         cy.get('.card-title').should('contain', '1984')
     });
-    
+
     it('Deve fazer busca usando a Massa de dados', () => {
         cy.get('#search-input').type(catalogo[2].livro)
         cy.get('.card-title').should('contain', catalogo[2].livro)
     });
 
+    it('deve fazer a busca de um livro usando fixture', () => {
+        cy.fixture('livros').then((cat) => {
+            cy.get('#search-input').type(cat[2].livro)
+            cy.get('.card-title').should('contain', cat[2].livro)
+        })
+    });
+
+    it('deve fazer a busca de um livro usando fixture', () => {
+        cy.fixture('livros').then((cat) => {
+            cat.forEach(item => {
+                cy.get('#search-input').type(item.livro)
+                cy.get('.card-title').should('contain', item.livro)
+            })
+        });
+    })
 });

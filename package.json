@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --browser chrome",
+    "cy:report": "npx cypress run --record --key e18c9b38-cc74-48fe-81e2-d33c0d50a301"
   },
   "repository": {
     "type": "git",
